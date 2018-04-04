@@ -5,15 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode development",
+    "start": "webpack-dev-server --open"
   },
   "keywords": [],
   "author": "Craig Rodrigues",
   "license": "ISC",
   "dependencies": {
     "react": "^16.3.1",
-    "react-dom": "^16.3.1"
+    "react-dom": "^16.3.1",
+    "webpack-dev-server": "^3.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
