@@ -1,28 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-function GroceryHeader(props) {
-    return <h1>{props.title}</h1>;
+function GroceryHeader({title}) {
+    return <h1>{title}</h1>;
 }
 
-function GroceryItem(props) {
-    return <li>{props.item}</li>;
+function GroceryItem({item}) {
+    return <li>{item}</li>;
 }
 
-function GroceryList(props) {
+function GroceryList({items}) {
     return (
         <ol>
-            {props.items.map((item, i) => <GroceryItem key={i} item={item} />)}
+            {items.map((item, i) => <GroceryItem key={i} item={item} />)}
         </ol>
     )
 }
 
+const groceryItems = [
+    'Eggs',
+    'Bacon',
+    'Cheese',
+    'Biscuits',
+    'Ham'
+];
+
 const list = (
     <div>
         <GroceryHeader title="My Grocery List!" />
-        <GroceryList items={['Eggs', 'Bacon', 'Cheese', 'Biscuits', 'Ham']}/>
+        <GroceryList items={groceryItems}/>
     </div>
-)
+);
 
 ReactDOM.render(
     list,
